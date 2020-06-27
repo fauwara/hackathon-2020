@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HOME</h1>
+
+    <!-- dummy data testing -->
+    <!-- {% for i in data %}
+        <h2>{{ i.heading }}</h2>
+        <h3>{{ i.author }}</h3>    
+        <p>{{ i.content }}</p>
+    {% endfor %} -->
+
+    {% for datas in data  %}
+        
+        <a href="{{ datas.link }}">
+            <h2> {{ datas.title }}</h2>
+        </a>
+        <p> {{ datas.summary }}</p>
+
+    {% endfor %}
+
+</body>
+</html>
