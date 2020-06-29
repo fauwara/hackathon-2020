@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} SAHYADRI {% endblock %}
+
+{% block section %}
+<section class="df-main df-home-content container">
+
+    <div class="content_sahyadri ">
+        <div class="data">
+            <h2>SAHYADRI CAMPUSS BUZZ</h2>
+            {% for topics in topic %}
+            <div>
+                <a href="#">
+                    <h3 class="inner_content_sahyadri"> {{ topics }} </h3>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% endblock %}

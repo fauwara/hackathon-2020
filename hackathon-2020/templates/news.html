@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} NEWS {% endblock %}
+
+
+{% block section %}
+<section class="df-main df-home-content container">
+
+    <div class="content ">
+        <div class="data">
+            <h2>NATIONAL NEWS</h2>
+            {% for datas in data_news  %}
+            <div>
+                <a href="{{ datas.link }}">
+                    <h3 class="inner_content"> {{ datas.title }}</h3>
+                </a>
+                <!-- <span class="tooltiptext">{{ datas.summary }}</span> -->
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="data">
+            <h2>TECH NEWS</h2>
+            {% for datas in data_tech  %}
+            <div>
+                <a href="{{ datas.link }}">
+                    <h3 class="inner_content"> {{ datas.title }}</h3>
+                </a>
+                <!-- <span class="tooltiptext">{{ datas.summary }}</span> -->
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
